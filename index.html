@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos para la barra superior, logos y banderas */
+        /* Estilos básicos integrados por seguridad */
+        body { margin: 0; font-family: 'Lato', sans-serif; }
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -50,7 +51,7 @@
 
     <div class="top-bar">
         <div class="logos">
-            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.src='https://via.placeholder.com/150x50?text=Logo+Colegio'">
+            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=Logo+Colegio'">
             <img src="https://www.ibo.org/Assets/Images/logo-ib-dp-en.png" alt="IB Diploma Logo">
         </div>
         <div class="lang-switcher">
