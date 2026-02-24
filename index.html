@@ -4,131 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos PD (Diploma) - IB</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para los nuevos elementos */
+        .top-bar {
+            display: flex;
+            justify-content:空间-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #f8f9fa;
+        }
+        .logos {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .logos img {
+            height: 50px; /* Ajusta según tus logos */
+            width: auto;
+        }
+        .lang-switcher {
+            cursor: pointer;
+            display: flex;
+            gap: 10px;
+        }
+        .lang-switcher img {
+            width: 30px;
+            height: 20px;
+            transition: transform 0.2s;
+        }
+        .lang-switcher img:hover {
+            transform: scale(1.1);
+        }
+        /* Ocultar elementos según idioma */
+        [lang="en"] .lang-es, [lang="es"] .lang-en { display: none; }
+    </style>
 </head>
-<body>
+<body lang="es">
+
+    <div class="top-bar">
+        <div class="logos">
+            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.style.display='none'">
+            <img src="https://www.ibo.org/Assets/Images/logo-ib-dp-en.png" alt="IB Diploma Logo">
+        </div>
+        <div class="lang-switcher">
+            <img src="https://flagcdn.com/w40/es.png" alt="Español" onclick="setLanguage('es')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')">
+        </div>
+    </div>
 
     <div class="header">
-        <h1>Recursos para el Programa del Diploma (PD / DP)</h1>
-        <p>Herramientas avanzadas para la investigación académica, gestión de fuentes y apoyo a los componentes troncales: Monografía, Teoría del Conocimiento y CAS.</p>
+        <h1 class="lang-es">Recursos para el Programa del Diploma (PD)</h1>
+        <h1 class="lang-en">Resources for the Diploma Programme (DP)</h1>
+        
+        <p class="lang-es">Herramientas avanzadas para la investigación académica, gestión de fuentes y apoyo a los componentes troncales.</p>
+        <p class="lang-en">Advanced tools for academic research, citation management, and support for core components.</p>
     </div>
 
     <div class="container">
         <div class="card">
-            <h2>Monografía (Extended Essay)</h2>
+            <h2 class="lang-es">Monografía (Extended Essay)</h2>
+            <h2 class="lang-en">Extended Essay (EE)</h2>
             <ul>
-                <li><a href="https://www.ibo.org/programmes/diploma-programme/curriculum/extended-essay/" target="_blank">Guía Oficial de la Monografía</a><p>Documentación del IB con los criterios de evaluación y requisitos.</p></li>
-                <li><a href="https://owl.purdue.edu/owl/research_and_citation/resources.html" target="_blank">Purdue OWL</a><p>Guías exhaustivas sobre cómo formular preguntas de investigación y citar en cualquier formato (APA, MLA, Chicago).</p></li>
-                <li><a href="https://archive.org/" target="_blank">Internet Archive</a><p>Acceso a millones de libros, textos y fuentes primarias digitalizadas.</p></li>
+                <li><a href="https://www.ibo.org/programmes/diploma-programme/curriculum/extended-essay/" target="_blank">
+                    <span class="lang-es">Guía Oficial de la Monografía</span><span class="lang-en">Official EE Guide</span>
+                </a><p class="lang-es">Documentación del IB con criterios de evaluación.</p><p class="lang-en">IB documentation with assessment criteria.</p></li>
+                <li><a href="https://owl.purdue.edu/" target="_blank">Purdue OWL</a>
+                <p class="lang-es">Guías sobre cómo formular preguntas de investigación y citar.</p><p class="lang-en">Guides on research questions and citations.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Bases de Datos Académicas</h2>
+            <h2 class="lang-es">Bases de Datos Académicas</h2>
+            <h2 class="lang-en">Academic Databases</h2>
             <ul>
-                <li><a href="https://www.jstor.org/" target="_blank">JSTOR</a><p>Una de las bibliotecas digitales más importantes para acceder a journals y artículos académicos.</p></li>
-                <li><a href="https://scholar.google.es/" target="_blank">Google Académico</a><p>Esencial para encontrar literatura académica y ver cómo se citan los trabajos entre sí.</p></li>
-                <li><a href="https://www.bne.es/es/catalogos/todos-los-catalogos" target="_blank">Biblioteca Nacional de España</a><p>Acceso a catálogos y colecciones digitales de gran valor para investigaciones humanísticas.</p></li>
-                <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a><p>Base de datos de referencia para investigación en ciencias de la salud y biomedicina.</p></li>
+                <li><a href="https://www.jstor.org/" target="_blank">JSTOR</a><p class="lang-es">Biblioteca digital de journals académicos.</p><p class="lang-en">Digital library of academic journals.</p></li>
+                <li><a href="https://scholar.google.es/" target="_blank">Google Scholar</a></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Gestión de Bibliografía</h2>
+            <h2 class="lang-es">Teoría del Conocimiento (TdC)</h2>
+            <h2 class="lang-en">Theory of Knowledge (ToK)</h2>
             <ul>
-                <li><a href="https://www.zotero.org/" target="_blank">Zotero</a><p>Software gratuito para gestionar tus fuentes, tomar notas y crear bibliografías automáticamente en tu procesador de texto.</p></li>
-                <li><a href="https://www.mendeley.com/" target="_blank">Mendeley</a><p>Otra excelente herramienta para organizar tus PDFs de investigación y colaborar con otros.</p></li>
-                 <li><a href="https://www.citationmachine.net/" target="_blank">Citation Machine</a><p>Generador de citas que ayuda a formatear tus fuentes correctamente en los principales estilos.</p></li>
+                <li><a href="https://plato.stanford.edu/" target="_blank">Stanford Philosophy</a><p class="lang-es">Recurso para explorar conceptos filosóficos.</p><p class="lang-en">Resource for exploring philosophical concepts.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Teoría del Conocimiento (TdC)</h2>
+            <h2 class="lang-es">Grupo 1: Lengua y Literatura</h2>
+            <h2 class="lang-en">Group 1: Language & Literature</h2>
             <ul>
-                <li><a href="https://plato.stanford.edu/" target="_blank">Stanford Encyclopedia of Philosophy</a><p>Recurso de nivel universitario para explorar conceptos filosóficos y áreas del conocimiento.</p></li>
-                <li><a href="https://www.ted.com/talks?language=es" target="_blank">TED Talks en Español</a><p>Charlas de expertos sobre una infinidad de temas que invitan a la reflexión y el cuestionamiento.</p></li>
-                <li><a href="https://elpais.com/ideas/" target="_blank">El País - Ideas</a><p>Sección con ensayos y artículos de fondo sobre filosofía, ciencia y sociedad.</p></li>
+                <li><a href="https://www.litcharts.com/" target="_blank">LitCharts</a><p class="lang-es">Guías detalladas de análisis literario.</p><p class="lang-en">Detailed literary analysis guides.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Creatividad, Actividad, Servicio (CAS)</h2>
+            <h2 class="lang-es">Grupo 4: Ciencias</h2>
+            <h2 class="lang-en">Group 4: Sciences</h2>
             <ul>
-                <li><a href="https://www.unv.org/es" target="_blank">Voluntarios de las Naciones Unidas</a><p>Plataforma para encontrar oportunidades de voluntariado en línea y presenciales a nivel global.</p></li>
-                <li><a href="https://www.hacesfalta.org/" target="_blank">Hacesfalta.org</a><p>Portal de voluntariado de referencia en España para encontrar proyectos sociales.</p></li>
-                 <li><a href="https://www.instructables.com/" target="_blank">Instructables</a><p>Comunidad para encontrar inspiración y guías paso a paso para proyectos creativos y técnicos.</p></li>
+                <li><a href="https://old-biologos.ib.bioninja.com.au/" target="_blank">BioNinja</a><p class="lang-es">Referencia absoluta para Biología IB.</p><p class="lang-en">The ultimate reference for IB Biology.</p></li>
+                <li><a href="https://www.phet.colorado.edu/es/" target="_blank">PhET</a><p class="lang-es">Simulaciones interactivas de física y química.</p><p class="lang-en">Interactive physics and chemistry simulations.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Probidad Académica Avanzada</h2>
+            <h2 class="lang-es">Grupo 5: Matemáticas</h2>
+            <h2 class="lang-en">Group 5: Mathematics</h2>
             <ul>
-                <li><a href="https://www.ibo.org/es/programmes/diploma-programme/assessment-and-exams/academic-integrity/" target="_blank">Probidad Académica según el IB</a><p>La página oficial del IB sobre la importancia y las políticas de la honestidad académica en el PD.</p></li>
-                 <li><a href="https://normas-apa.org/" target="_blank">Normas APA (7ª ed.)</a><p>Guía detallada en español para aplicar el formato de citación APA.</p></li>
-                <li><a href="https://writing.wisc.edu/handbook/assignments/quotingsources/" target="_blank">Guía sobre Citas (U. Wisconsin)</a><p>Excelentes consejos sobre cuándo citar, parafrasear o resumir (en inglés).</p></li>
-            </ul>
-        </div>
-		<div class="card">
-            <h2>Grupo 1: Estudios de Lengua y Literatura</h2>
-            <ul>
-                <li><a href="https://www.litcharts.com/" target="_blank">LitCharts</a><p>Guías detalladas de análisis literario, temas y símbolos para las obras del currículo.</p></li>
-                <li><a href="https://www.oxfordstudycourses.com/ib-english-resources" target="_blank">OSC English</a><p>Recursos y consejos para el análisis de textos no literarios y el comentario de texto.</p></li>
+                <li><a href="https://www.revisionvillage.com/" target="_blank">Revision Village</a><p class="lang-es">Prácticas de exámenes de Matemáticas.</p><p class="lang-en">Maths exam practice and revision.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Grupo 2: Adquisición de Lenguas</h2>
+            <h2 class="lang-es">Probidad Académica</h2>
+            <h2 class="lang-en">Academic Integrity</h2>
             <ul>
-                <li><a href="https://www.newsinslowspanish.com/" target="_blank">News in Slow Spanish/French/Italian</a><p>Noticias adaptadas para practicar la comprensión auditiva y el vocabulario actual.</p></li>
-                <li><a href="https://www.wordreference.com/" target="_blank">WordReference</a><p>Diccionario esencial con foros especializados en modismos y contextos específicos.</p></li>
+                <li><a href="https://normas-apa.org/" target="_blank">Normas APA</a><p class="lang-es">Guía detallada para citación APA.</p><p class="lang-en">Detailed guide for APA style.</p></li>
             </ul>
         </div>
 
-        <div class="card">
-            <h2>Grupo 3: Individuos y Sociedades</h2>
-            <ul>
-                <li><a href="https://www.tutor2u.net/economics" target="_blank">Tutor2u Economics / Business</a><p>Explicaciones claras de conceptos, diagramas y estudios de caso para Economía y Gestión Empresarial.</p></li>
-                <li><a href="https://www.activehistory.co.uk/" target="_blank">ActiveHistory</a><p>Recursos interactivos y simulaciones para el programa de Historia del IB.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Grupo 4: Ciencias</h2>
-            <ul>
-                <li><a href="https://old-biologos.ib.bioninja.com.au/" target="_blank">BioNinja</a><p>La referencia absoluta para Biología IB, organizada por temas del programa.</p></li>
-                <li><a href="https://www.khanacademy.org/science/physics" target="_blank">Khan Academy - Ciencias</a><p>Lecciones en video y ejercicios prácticos para Química y Física.</p></li>
-                <li><a href="https://www.phet.colorado.edu/es/" target="_blank">PhET Simulaciones</a><p>Simulaciones interactivas de física y química, ideales para entender conceptos complejos e IAs.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Grupo 5: Matemáticas</h2>
-            <ul>
-                <li><a href="https://www.revisionvillage.com/" target="_blank">Revision Village</a><p>Considerado el mejor recurso para prácticas de exámenes de Matemáticas AA y AI.</p></li>
-                <li><a href="https://www.desmos.com/calculator?lang=es" target="_blank">Desmos</a><p>Calculadora gráfica online para visualizar funciones y realizar análisis de datos.</p></li>
-                <li><a href="https://www.geogebra.org/?lang=es" target="_blank">GeoGebra</a><p>Herramienta dinámica para geometría, álgebra y cálculo.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Grupo 6: Artes</h2>
-            <ul>
-                <li><a href="https://www.metmuseum.org/art/online-features" target="_blank">The Met - Online Resources</a><p>Acceso a colecciones y análisis históricos para Artes Visuales.</p></li>
-                <li><a href="https://www.google.com/culturalinstitute/beta/" target="_blank">Google Arts & Culture</a><p>Explora museos y movimientos artísticos en alta resolución para el Comparative Study.</p></li>
-            </ul>
-        </div>
     </div>
 
     <footer>
-        <p>Recursos seleccionados para la comunidad del IB. Para un mejor aprovechamiento, consulta siempre a tu bibliotecario/a o profesor/a.</p>
+        <p class="lang-es">Recursos seleccionados para la comunidad del IB. Consulta a tu bibliotecario/a.</p>
+        <p class="lang-en">Selected resources for the IB community. Consult your librarian.</p>
     </footer>
 
-</body>
-</html>
-    <footer>
-        <p>Recursos seleccionados para la comunidad del IB. Para un mejor aprovechamiento, consulta siempre a tu bibliotecario/a o profesor/a.</p>
-    </footer>
-
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('lang', lang);
+        }
+    </script>
 </body>
 </html>
