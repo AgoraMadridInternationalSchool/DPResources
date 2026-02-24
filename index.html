@@ -8,37 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos adicionales para los nuevos elementos */
+        /* Estilos para cabecera e idiomas */
         .top-bar {
             display: flex;
-            justify-content:空间-between;
+            justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            background: #f8f9fa;
+            padding: 15px 30px;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
         }
         .logos {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
         }
         .logos img {
-            height: 50px; /* Ajusta según tus logos */
+            height: 60px;
             width: auto;
         }
         .lang-switcher {
-            cursor: pointer;
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         .lang-switcher img {
-            width: 30px;
-            height: 20px;
+            width: 35px;
+            cursor: pointer;
             transition: transform 0.2s;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
-        .lang-switcher img:hover {
-            transform: scale(1.1);
-        }
-        /* Ocultar elementos según idioma */
+        .lang-switcher img:hover { transform: scale(1.1); }
+        
+        /* Lógica bilingüe */
         [lang="en"] .lang-es, [lang="es"] .lang-en { display: none; }
     </style>
 </head>
@@ -46,33 +47,33 @@
 
     <div class="top-bar">
         <div class="logos">
-            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.style.display='none'">
+            <img src="logo-colegio.png" alt="Logo Colegio" onerror="this.src='https://via.placeholder.com/150x60?text=Logo+Colegio'">
             <img src="https://www.ibo.org/Assets/Images/logo-ib-dp-en.png" alt="IB Diploma Logo">
         </div>
         <div class="lang-switcher">
-            <img src="https://flagcdn.com/w40/es.png" alt="Español" onclick="setLanguage('es')">
-            <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')">
+            <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español" onclick="setLanguage('es')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')">
         </div>
     </div>
 
     <div class="header">
-        <h1 class="lang-es">Recursos para el Programa del Diploma (PD)</h1>
+        <h1 class="lang-es">Recursos para el Programa del Diploma (PD / DP)</h1>
         <h1 class="lang-en">Resources for the Diploma Programme (DP)</h1>
-        
-        <p class="lang-es">Herramientas avanzadas para la investigación académica, gestión de fuentes y apoyo a los componentes troncales.</p>
-        <p class="lang-en">Advanced tools for academic research, citation management, and support for core components.</p>
+        <p class="lang-es">Herramientas avanzadas para la investigación académica, gestión de fuentes y apoyo a los componentes troncales: Monografía, Teoría del Conocimiento y CAS.</p>
+        <p class="lang-en">Advanced tools for academic research, source management, and support for core components: Extended Essay, Theory of Knowledge, and CAS.</p>
     </div>
 
     <div class="container">
+        
         <div class="card">
             <h2 class="lang-es">Monografía (Extended Essay)</h2>
             <h2 class="lang-en">Extended Essay (EE)</h2>
             <ul>
                 <li><a href="https://www.ibo.org/programmes/diploma-programme/curriculum/extended-essay/" target="_blank">
                     <span class="lang-es">Guía Oficial de la Monografía</span><span class="lang-en">Official EE Guide</span>
-                </a><p class="lang-es">Documentación del IB con criterios de evaluación.</p><p class="lang-en">IB documentation with assessment criteria.</p></li>
-                <li><a href="https://owl.purdue.edu/" target="_blank">Purdue OWL</a>
-                <p class="lang-es">Guías sobre cómo formular preguntas de investigación y citar.</p><p class="lang-en">Guides on research questions and citations.</p></li>
+                </a><p class="lang-es">Documentación del IB con los criterios de evaluación.</p><p class="lang-en">IB documentation with assessment criteria.</p></li>
+                <li><a href="https://owl.purdue.edu/owl/research_and_citation/resources.html" target="_blank">Purdue OWL</a><p class="lang-es">Guías sobre cómo formular preguntas y citar (APA, MLA, Chicago).</p><p class="lang-en">Guides on research questions and citation styles.</p></li>
+                <li><a href="https://archive.org/" target="_blank">Internet Archive</a><p class="lang-es">Acceso a millones de libros y fuentes primarias.</p><p class="lang-en">Access to millions of books and primary sources.</p></li>
             </ul>
         </div>
 
@@ -80,63 +81,15 @@
             <h2 class="lang-es">Bases de Datos Académicas</h2>
             <h2 class="lang-en">Academic Databases</h2>
             <ul>
-                <li><a href="https://www.jstor.org/" target="_blank">JSTOR</a><p class="lang-es">Biblioteca digital de journals académicos.</p><p class="lang-en">Digital library of academic journals.</p></li>
-                <li><a href="https://scholar.google.es/" target="_blank">Google Scholar</a></li>
+                <li><a href="https://www.jstor.org/" target="_blank">JSTOR</a><p class="lang-es">Biblioteca digital de journals y artículos académicos.</p><p class="lang-en">Digital library for academic journals and articles.</p></li>
+                <li><a href="https://scholar.google.es/" target="_blank">Google Académico / Scholar</a></li>
+                <li><a href="https://www.bne.es/es/catalogos/todos-los-catalogos" target="_blank">BNE</a><p class="lang-es">Biblioteca Nacional de España: Investigaciones humanísticas.</p><p class="lang-en">National Library of Spain: Humanistic research.</p></li>
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a><p class="lang-es">Referencia para salud y biomedicina.</p><p class="lang-en">Reference for health and biomedicine.</p></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2 class="lang-es">Teoría del Conocimiento (TdC)</h2>
-            <h2 class="lang-en">Theory of Knowledge (ToK)</h2>
+            <h2 class="lang-es">Gestión de Bibliografía</h2>
+            <h2 class="lang-en">Bibliography Management</h2>
             <ul>
-                <li><a href="https://plato.stanford.edu/" target="_blank">Stanford Philosophy</a><p class="lang-es">Recurso para explorar conceptos filosóficos.</p><p class="lang-en">Resource for exploring philosophical concepts.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="lang-es">Grupo 1: Lengua y Literatura</h2>
-            <h2 class="lang-en">Group 1: Language & Literature</h2>
-            <ul>
-                <li><a href="https://www.litcharts.com/" target="_blank">LitCharts</a><p class="lang-es">Guías detalladas de análisis literario.</p><p class="lang-en">Detailed literary analysis guides.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="lang-es">Grupo 4: Ciencias</h2>
-            <h2 class="lang-en">Group 4: Sciences</h2>
-            <ul>
-                <li><a href="https://old-biologos.ib.bioninja.com.au/" target="_blank">BioNinja</a><p class="lang-es">Referencia absoluta para Biología IB.</p><p class="lang-en">The ultimate reference for IB Biology.</p></li>
-                <li><a href="https://www.phet.colorado.edu/es/" target="_blank">PhET</a><p class="lang-es">Simulaciones interactivas de física y química.</p><p class="lang-en">Interactive physics and chemistry simulations.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="lang-es">Grupo 5: Matemáticas</h2>
-            <h2 class="lang-en">Group 5: Mathematics</h2>
-            <ul>
-                <li><a href="https://www.revisionvillage.com/" target="_blank">Revision Village</a><p class="lang-es">Prácticas de exámenes de Matemáticas.</p><p class="lang-en">Maths exam practice and revision.</p></li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="lang-es">Probidad Académica</h2>
-            <h2 class="lang-en">Academic Integrity</h2>
-            <ul>
-                <li><a href="https://normas-apa.org/" target="_blank">Normas APA</a><p class="lang-es">Guía detallada para citación APA.</p><p class="lang-en">Detailed guide for APA style.</p></li>
-            </ul>
-        </div>
-
-    </div>
-
-    <footer>
-        <p class="lang-es">Recursos seleccionados para la comunidad del IB. Consulta a tu bibliotecario/a.</p>
-        <p class="lang-en">Selected resources for the IB community. Consult your librarian.</p>
-    </footer>
-
-    <script>
-        function setLanguage(lang) {
-            document.body.setAttribute('lang', lang);
-        }
-    </script>
-</body>
-</html>
+                <li><a href="https://www.zotero.org/" target="_blank">Z
