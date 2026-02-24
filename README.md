@@ -1,5 +1,3 @@
-# DPResources
-
 # Repositorio de Recursos para el PD (Diploma)
 
 Este repositorio contiene el código para una página web sencilla que recopila recursos digitales para estudiantes del Programa del Diploma (PD) del Bachillerato Internacional (IB).
