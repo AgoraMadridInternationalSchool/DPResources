@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos básicos integrados por seguridad */
+        /* Estilos básicos integrados */
         body { margin: 0; font-family: 'Lato', sans-serif; }
         .top-bar {
             display: flex;
@@ -42,12 +42,12 @@
             transform: scale(1.1);
         }
         
-        /* Lógica para ocultar el idioma inactivo */
-        [lang="en"] .lang-es { display: none; }
-        [lang="es"] .lang-en { display: none; }
+        /* SOLUCIÓN AL BUG: Lógica estricta de idiomas en la raíz */
+        html[lang="en"] .lang-es { display: none; }
+        html[lang="es"] .lang-en { display: none; }
     </style>
 </head>
-<body lang="es">
+<body>
 
     <div class="top-bar">
         <div class="logos">
@@ -300,9 +300,9 @@
     </footer>
 
     <script>
-        // Función para cambiar el idioma de la página
+        // SOLUCIÓN AL BUG: Ahora cambiamos el idioma de la etiqueta <html> directamente, no del <body>
         function setLanguage(lang) {
-            document.body.setAttribute('lang', lang);
+            document.documentElement.setAttribute('lang', lang);
         }
     </script>
 </body>
